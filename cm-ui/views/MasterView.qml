@@ -9,6 +9,6 @@ Window {
 
     Text {
         id: t0
-        text: qsTr("Welcome to the Client Management system!!!")
+        text: masterController.ui_welcomeMessage
     }
 }
