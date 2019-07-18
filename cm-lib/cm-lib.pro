@@ -37,3 +37,7 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+DESTDIR = $$PWD/../../.lib
+
+message(cm-lib project dir: $$DESTDIR)

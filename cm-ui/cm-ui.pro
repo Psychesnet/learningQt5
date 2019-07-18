@@ -20,7 +20,7 @@ INCLUDEPATH += source \
 SOURCES += \
         source/main.cpp
 
-LIBS += -L$$PWD/../../build-cm-Desktop_Qt_5_12_4_clang_64bit-Debug/cm-lib -lcm-lib
+LIBS += -L$$PWD/../../.lib -lcm-lib
 
 RESOURCES += views.qrc
 
@@ -34,3 +34,5 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+message(cm-ui project dir: $$DESTDIR)
