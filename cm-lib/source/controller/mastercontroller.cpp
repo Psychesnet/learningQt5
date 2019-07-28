@@ -3,21 +3,9 @@
 namespace cm {
 namespace controllers {
 
-class MasterController::Implementation
-{
-public:
-    Implementation(MasterController *m) : masterController(m)
-    {
-        navigationController = new NavigationController(masterController);
-    }
-    MasterController *masterController{nullptr};
-    NavigationController *navigationController{nullptr};
-    QString welcomeMessage = "This is MasterController to Major Tom";
-};
-
 MasterController::MasterController(QObject *parent) : QObject(parent)
 {
-    implementation.reset(new Implementation(this));
+    navigationController = new NavigationController();
 }
 
 MasterController::~MasterController()
@@ -25,14 +13,14 @@ MasterController::~MasterController()
 
 }
 
-NavigationController* MasterController::navigationController()
+NavigationController* MasterController::GetNavigationController()
 {
-    return implementation->navigationController;
+    return navigationController;
 }
 
-const QString& MasterController::welcomeMessage() const
+const QString& MasterController::GetWelcomeMessage() const
 {
-    return implementation->welcomeMessage;
+    return welcomeMessage;
 }
 
 }}
