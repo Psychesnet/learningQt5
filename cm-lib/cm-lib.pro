@@ -26,10 +26,12 @@ INCLUDEPATH += source
 
 SOURCES += \
         source/controller/mastercontroller.cpp \
+        source/controller/navigationcontroller.cpp \
         source/models/client.cpp
 
 HEADERS += \
         source/controller/mastercontroller.h \
+        source/controller/navigationcontroller.h \
         source/models/client.h \
         source/cm-lib_global.h
 

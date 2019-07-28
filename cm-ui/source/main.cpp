@@ -1,8 +1,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-// my classes
 #include <controller/mastercontroller.h>
+#include <controller/navigationcontroller.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 
     // load module called CM with version 1.0 into metadata
     qmlRegisterType<cm::controllers::MasterController>("CM", 1, 0, "MasterController");
+    qmlRegisterType<cm::controllers::NavigationController>("CM", 1, 0, "NavigationController");
 
     // inject controller into root QML context
     cm::controllers::MasterController masterController;
