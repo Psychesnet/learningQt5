@@ -54,6 +54,7 @@ Window {
             right: parent.right
         }
         initialItem: Qt.resolvedUrl("qrc:/views/JustLogo.qml")
+        clip: true
     }
     
 }
