@@ -43,6 +43,10 @@ Window {
                 text: "Find Client"
                 onClicked: masterController.ui_navigationController.goFindClientView()
             }
+            Button {
+                text: "Quit"
+                onClicked: Qt.quit()
+            }
         }
     }
     StackView {
