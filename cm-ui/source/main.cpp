@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
     // inject controller into root QML context
     cm::controllers::MasterController masterController;
     QQmlApplicationEngine engine;
+    // create our qml module, need the path to get it
+    engine.addImportPath("qrc:/");
     engine.rootContext()->setContextProperty("masterController", &masterController);
     const QUrl url(QStringLiteral("qrc:/views/MasterView.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

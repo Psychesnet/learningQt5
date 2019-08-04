@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
+import assets 1.0
 
 Window {
     visible: true
@@ -31,21 +32,74 @@ Window {
         width: 100
         color: "#000000"
         Column {
-            Button {
-                text: "Dashboard"
-                onClicked: masterController.ui_navigationController.goDashboardView()
+            Row {
+                Text {
+                    font {
+                        family: Style.fontAwesome
+                        pixelSize: 42
+                    }
+                    color: "#ffffff"
+                    text: "\uf0c9"
+                }
+                Text {
+                    color: "#ffffff"
+                }
             }
-            Button {
-                text: "New Client"
-                onClicked: masterController.ui_navigationController.goCreateClientView()
+            Row {
+                Text {
+                    font {
+                        family: Style.fontAwesome
+                        pixelSize: 42
+                    }
+                    color: "#ffffff"
+                    text: "\uf015"
+                }
+                Text {
+                    color: "#ffffff"
+                    text: qsTr("Dashboard")
+                }
             }
-            Button {
-                text: "Find Client"
-                onClicked: masterController.ui_navigationController.goFindClientView()
+            Row {
+                Text {
+                    font {
+                        family: Style.fontAwesome
+                        pixelSize: 42
+                    }
+                    color: "#ffffff"
+                    text: "\uf0c0"
+                }
+                Text {
+                    color: "#ffffff"
+                    text: qsTr("New User")
+                }
             }
-            Button {
-                text: "Quit"
-                onClicked: Qt.quit()
+            Row {
+                Text {
+                    font {
+                        family: Style.fontAwesome
+                        pixelSize: 42
+                    }
+                    color: "#ffffff"
+                    text: "\uf002"
+                }
+                Text {
+                    color: "#ffffff"
+                    text: qsTr("Find User")
+                }
+            }
+            Row {
+                Text {
+                    font {
+                        family: Style.fontAwesome
+                        pixelSize: 42
+                    }
+                    color: "#ffffff"
+                    text: "\uf00d"
+                }
+                Text {
+                    color: "#ffffff"
+                    text: qsTr("Exit...")
+                }
             }
         }
     }
