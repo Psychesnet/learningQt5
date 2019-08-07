@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import assets 1.0
+import components 1.0
 
 Window {
     visible: true
@@ -32,74 +33,25 @@ Window {
         width: 100
         color: "#000000"
         Column {
-            Row {
-                Text {
-                    font {
-                        family: Style.fontAwesome
-                        pixelSize: 42
-                    }
-                    color: "#ffffff"
-                    text: "\uf0c9"
-                }
-                Text {
-                    color: "#ffffff"
-                }
+            NavigationButton {
+                iconCharacter: "\uf0c9"
+                description: ""
             }
-            Row {
-                Text {
-                    font {
-                        family: Style.fontAwesome
-                        pixelSize: 42
-                    }
-                    color: "#ffffff"
-                    text: "\uf015"
-                }
-                Text {
-                    color: "#ffffff"
-                    text: qsTr("Dashboard")
-                }
+            NavigationButton {
+                iconCharacter: "\uf015"
+                description: "Dashboard"
             }
-            Row {
-                Text {
-                    font {
-                        family: Style.fontAwesome
-                        pixelSize: 42
-                    }
-                    color: "#ffffff"
-                    text: "\uf0c0"
-                }
-                Text {
-                    color: "#ffffff"
-                    text: qsTr("New User")
-                }
+            NavigationButton {
+                iconCharacter: "\uf0c0"
+                description: "New User"
             }
-            Row {
-                Text {
-                    font {
-                        family: Style.fontAwesome
-                        pixelSize: 42
-                    }
-                    color: "#ffffff"
-                    text: "\uf002"
-                }
-                Text {
-                    color: "#ffffff"
-                    text: qsTr("Find User")
-                }
+            NavigationButton {
+                iconCharacter: "\uf002"
+                description: "Find User"
             }
-            Row {
-                Text {
-                    font {
-                        family: Style.fontAwesome
-                        pixelSize: 42
-                    }
-                    color: "#ffffff"
-                    text: "\uf00d"
-                }
-                Text {
-                    color: "#ffffff"
-                    text: qsTr("Exit...")
-                }
+            NavigationButton {
+                iconCharacter: "\uf00d"
+                description: "Exit"
             }
         }
     }

@@ -23,7 +23,8 @@ SOURCES += \
 LIBS += -L$$PWD/../../.lib -lcm-lib
 
 RESOURCES += views.qrc \
-    assets.qrc
+    assets.qrc \
+    components.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH = $$PWD
@@ -39,4 +40,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 message(cm-ui project dir: $$DESTDIR)
 
 DISTFILES += \
-    assets/qmldir
+    assets/qmldir \
+    components/qmldir
