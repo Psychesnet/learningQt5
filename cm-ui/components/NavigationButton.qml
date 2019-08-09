@@ -6,13 +6,23 @@ import assets 1.0
 Item {
     property alias iconCharacter: textIcon.text
     property alias description: textDescription.text
-
+    property color hoverColour: Style.colourNavigationBarBackground
+    signal navigationButtonClicked()
     width: Style.widthNavigationButton
     height: Style.heightNavigationButton
     Rectangle {
         id: background
         anchors.fill: parent
         color: Style.colourNavigationBarBackground
+        states: [
+            State {
+                name: "hover"
+                PropertyChanges {
+                    target: background
+                    color: hoverColour
+                }
+            }
+        ]
         Row {
             Text {
                 id: textIcon
@@ -29,9 +39,20 @@ Item {
                 id: textDescription
                 width: Style.widthNavigationButtonDescription
                 height: Style.heightNavigationButtonDescription
-                color: "#ffffff"
+                color: Style.colourNavigationBarFont
                 text: "SET ME!"
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignLeft
+                font.pixelSize: Style.pixelSizeNavigationBarText
             }
+        }
+        MouseArea {
+            anchors.fill: parent
+            cursorShape: Qt.PointingHandCursor
+            hoverEnabled: true
+            onEntered: background.state = "hover"
+            onExited: background.state = ""
+            onClicked: navigationButtonClicked()
         }
     }
 }

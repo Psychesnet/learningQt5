@@ -13,6 +13,7 @@ Window {
         contentFrame.replace("qrc:/views/SplashView.qml")
     }
     Connections {
+        // slots
         target: masterController.ui_navigationController
         onGoCreateClientView:
             contentFrame.replace("qrc:/views/CreateClientView.qml")
