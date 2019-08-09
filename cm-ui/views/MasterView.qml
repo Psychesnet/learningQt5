@@ -23,38 +23,10 @@ Window {
         onGoFindClientView:
             contentFrame.replace("qrc:/views/FindClientView.qml")
     }
-    Rectangle {
+    NavigationBar {
         id: navigationBar
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            left: parent.left
-        }
-        width: 100
-        color: "#000000"
-        Column {
-            NavigationButton {
-                iconCharacter: "\uf0c9"
-                description: ""
-            }
-            NavigationButton {
-                iconCharacter: "\uf015"
-                description: "Dashboard"
-            }
-            NavigationButton {
-                iconCharacter: "\uf0c0"
-                description: "New User"
-            }
-            NavigationButton {
-                iconCharacter: "\uf002"
-                description: "Find User"
-            }
-            NavigationButton {
-                iconCharacter: "\uf00d"
-                description: "Exit"
-            }
-        }
     }
+
     StackView {
         id: contentFrame
         anchors {
