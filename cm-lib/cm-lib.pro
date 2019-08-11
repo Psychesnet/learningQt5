@@ -25,13 +25,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 INCLUDEPATH += source
 
 SOURCES += \
+        source/controller/command-controller.cpp \
         source/controller/mastercontroller.cpp \
         source/controller/navigationcontroller.cpp \
+        source/framework/command.cpp \
         source/models/client.cpp
 
 HEADERS += \
+        source/controller/command-controller.h \
         source/controller/mastercontroller.h \
         source/controller/navigationcontroller.h \
+        source/framework/command.h \
         source/models/client.h \
         source/cm-lib_global.h
 

@@ -19,7 +19,7 @@ Item {
                 name: "hover"
                 PropertyChanges {
                     target: background
-                    color: hoverColour
+                    color: Qt.lighter(hoverColour)
                 }
             }
         ]

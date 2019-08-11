@@ -17,6 +17,15 @@ Item {
     readonly property real heightNavigationButtonDescription: heightNavigationButtonIcon
     readonly property real widthNavigationButton: widthNavigationButtonIcon + widthNavigationButtonDescription
     readonly property real heightNavigationButton: Math.max(heightNavigationButtonIcon, heightNavigationButtonDescription)
+
+    readonly property color colourCommandBarBackground: "#cecece"
+    readonly property color colourCommandBarFont: "#131313"
+    readonly property color colourCommandBarFontDisabled: "#636363"
+    readonly property real heightCommandBar: heightCommandButton
+    readonly property int pixelSizeCommandBarIcon: 32
+    readonly property int pixelSizeCommandBarText: 12
+    readonly property real widthCommandButton: 80
+    readonly property real heightCommandButton: widthCommandButton
     FontLoader {
         id: fontAwesomeLoader
         source: "qrc:/assets/fontawesome.ttf"
